@@ -32,17 +32,17 @@ get_header();
 // endif;
 
 
-// $myArguMent = array(
-// "post_type" => "page"
-// );
+$myArguMent = array(
+"post_type" => "younus"
+);
 
-// $the_query = new WP_Query($myArguMent);
+$the_query = new WP_Query($myArguMent);
 
-// while($the_query -> have_posts()){
-// $the_query -> the_post();
+while($the_query -> have_posts()){
+$the_query -> the_post();
 
-// the_title();
-// }
+the_title();
+}
 
 
 
