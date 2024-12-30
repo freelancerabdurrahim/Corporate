@@ -11,45 +11,38 @@ get_header();
 
         <?php
 
-      //   if(have_posts()):
-      //     while(have_posts()):the_post();
+// if(have_posts()):
+//   while(have_posts()):the_post();
 
-      //     the_title();
+//   the_title();
 
-      //     the_author();
+//   the_author();
 
-      //     the_content();
+//   the_content();
 
-      //     the_category();
+//   the_category();
 
-      //     the_post_thumbnail();
+//   the_post_thumbnail();
 
-      //  endwhile;
+// endwhile;
 
-      //     else:
-      //     echo "Ami post Nai tahole delete hoye gese";
+//   else:
+//   echo "Ami post Nai tahole delete hoye gese";
 
-      //  endif;
-
-     
-$myArguMent = array(
-  "post_type" => "page"
-);
-
-$the_query = new WP_Query($myArguMent);
-
-while($the_query -> have_posts()){
-  $the_query -> the_post();
-
-  the_title();
-}
+// endif;
 
 
+// $myArguMent = array(
+// "post_type" => "page"
+// );
 
+// $the_query = new WP_Query($myArguMent);
 
+// while($the_query -> have_posts()){
+// $the_query -> the_post();
 
-
-
+// the_title();
+// }
 
 
 
