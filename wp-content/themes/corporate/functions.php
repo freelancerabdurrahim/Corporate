@@ -52,4 +52,69 @@ if(!function_exists('neogym_services')){
 
 add_action('init', 'neogym_services');
 
+
+
+// Student list
+
+
+if(!function_exists('neogym_student_list')){
+    function neogym_student_list(){
+        register_post_type("student", 
+            array(
+            'labels' => array(
+                    'name' => __('Students', 'neogymtextdomain'),
+                    'singular_name' => __('Student', 'neogymtextdomain'),
+                    'add_new_item' => __( 'Add New Student' ),
+                    'not_found' => __( 'No Student found' ),
+                    'not_found_in_trash' => __( 'No Student found in Trash' ),
+                    'featured_image' => __( 'Student Images'),
+                    'set_featured_image' => __( 'Set Student Images'),
+            ),
+            'public' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+            'taxonomies' => array('mystudentdepartment'),
+            'has_archive' => true,
+            ));
+    }
+}
+
+
+add_action('init', 'neogym_student_list');
+
+
+// add texonomy
+
+
+if(!function_exists('mystudentdepartment')){
+    function mystudentdepartment(){
+
+        $labels = array(
+            'name'              => _x( 'Student', 'neogymtextdomain' ),
+            'singular_name'     => _x( 'Student', 'neogymtextdomain' ),
+            'search_items'      => __( 'Search Student' ),
+            'all_items'         => __( 'All Student' ),
+            'parent_item'       => __( 'Parent Student' ),
+            'parent_item_colon' => __( 'Parent Student:' ),
+            'edit_item'         => __( 'Edit Student' ),
+            'update_item'       => __( 'Update Student' ),
+            'add_new_item'      => __( 'Add New Student' ),
+            'new_item_name'     => __( 'New Student Name' ),
+            'menu_name'         => __( 'Student Deertment' ),
+        );
+
+        $args   = array(
+            'hierarchical'      => true, // make it hierarchical (like categories)
+            'labels'            => $labels,
+            'show_ui'           => true,
+            'show_admin_column' => true,
+            'query_var'         => true,
+            'rewrite'           => [ 'slug' => 'course' ],
+        );
+        
+        register_taxonomy('mystudentdepartment', ['student'],$args);
+    }
+}
+
+add_action('init','mystudentdepartment');
+
 ?>

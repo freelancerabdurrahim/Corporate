@@ -33,7 +33,7 @@ get_header();
 
 
 $myArguMent = array(
-"post_type" => "younus"
+"post_type" => "student"
 );
 
 $the_query = new WP_Query($myArguMent);
@@ -42,6 +42,12 @@ while($the_query -> have_posts()){
 $the_query -> the_post();
 
 the_title();
+$myalldepertment= get_the_category();
+
+// foreach($myalldepertment as $category){
+//   echo '<span>' .esc_html($category ->name).'<span>';
+// }
+var_dump($myalldepertment);
 }
 
 
