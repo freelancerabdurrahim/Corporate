@@ -127,13 +127,16 @@ if(!function_exists('myword')){
     function myword(){
 
         add_shortcode('bestword', 'mybestword');
-
-        if(!function_exists('mybestword')){
-            function mybestword(){
-
-                return "Allah Mohan";
-            }
+        function mybestword(){
+            return "Allah Mohan allah mohan";
         }
+
+        // if(!function_exists('mybestword')){
+        //     function mybestword(){
+
+        //         return "Allah Mohan";
+        //     }
+        // }
 
 
     }
@@ -142,6 +145,12 @@ if(!function_exists('myword')){
 
 add_action('init','myword');
 
+
+
+
+require_once get_theme_file_path() .'/inc/codestar/codestar-framework.php';
+
+require_once get_theme_file_path() .'/inc/codestar/samples/admin-options.php';
 
 
 
