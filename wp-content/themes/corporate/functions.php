@@ -117,4 +117,33 @@ if(!function_exists('mystudentdepartment')){
 
 add_action('init','mystudentdepartment');
 
+
+
+
+
+// add shortcode
+
+if(!function_exists('myword')){
+    function myword(){
+
+        add_shortcode('bestword', 'mybestword');
+
+        if(!function_exists('mybestword')){
+            function mybestword(){
+
+                return "Allah Mohan";
+            }
+        }
+
+
+    }
+}
+
+
+add_action('init','myword');
+
+
+
+
+
 ?>

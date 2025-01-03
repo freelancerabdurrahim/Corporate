@@ -11,25 +11,25 @@ get_header();
 
         <?php
 
-// if(have_posts()):
-//   while(have_posts()):the_post();
+if(have_posts()):
+  while(have_posts()):the_post();
 
-//   the_title();
+  // the_title();
 
-//   the_author();
+  // the_author();
 
-//   the_content();
+  the_content();
 
-//   the_category();
+  // the_category();
 
-//   the_post_thumbnail();
+  // the_post_thumbnail();
 
-// endwhile;
+endwhile;
 
-//   else:
-//   echo "Ami post Nai tahole delete hoye gese";
+  else:
+  echo "Ami post Nai tahole delete hoye gese";
 
-// endif;
+endif;
 
 
 $myArguMent = array(
