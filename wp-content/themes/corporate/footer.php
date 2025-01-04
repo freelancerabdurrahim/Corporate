@@ -10,7 +10,10 @@
             </div>
             <div class="detail-box">
               <p>
-                Location
+               <?php
+               $option = get_option('_prefix_my_options');
+               echo $option['opt-location'];
+               ?>
               </p>
             </div>
           </div>
@@ -22,7 +25,10 @@
             </div>
             <div class="detail-box">
               <p>
-                +02 1234567890
+                <?php 
+                 $option = get_option('_prefix_my_options');
+                 echo $option['ar_mobile'];
+                ?>
               </p>
             </div>
           </div>
@@ -34,7 +40,10 @@
             </div>
             <div class="detail-box">
               <p>
-                demo@gmail.com
+               <?php 
+                $option = get_option('_prefix_my_options');
+                echo $option['ar_gmail'];
+               ?>
               </p>
             </div>
           </div>
@@ -48,7 +57,13 @@
   <!-- footer section -->
   <footer class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved. Design by
+      <?php 
+      $option = get_option('_prefix_my_options');
+
+      echo $option['opt-textarea'];
+
+
+      ?>
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </footer>
@@ -56,6 +71,9 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
+
+
+  <?php wp_footer(); ?>
 
 </body>
 

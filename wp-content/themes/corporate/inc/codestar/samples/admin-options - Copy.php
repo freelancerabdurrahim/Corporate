@@ -9,8 +9,8 @@ $prefix = '_prefix_my_options';
 // Create options
 //
 CSF::createOptions( $prefix, array(
-  'menu_title' => 'Theme Option',
-  'menu_slug'  => 'theme-option',
+  'menu_title' => 'CSF Demo',
+  'menu_slug'  => 'csf-demo',
 ) );
 
 //
@@ -35,27 +35,6 @@ CSF::createSection( $prefix, array(
       'type'  => 'textarea',
       'title' => 'Textarea',
       'help'  => 'The help text of the field.',
-    ),
-
-    array(
-      'id'    => 'opt-location',
-      'type'  => 'text',
-      'title' => 'Location',
-      'help'  => 'Type Location.',
-    ),
-
-    array(
-      'id'    => 'ar_mobile',
-      'type'  => 'text',
-      'title' => 'Mobile Number',
-      'help'  => 'Type Mobile Number.',
-    ),
-
-    array(
-      'id'    => 'ar_gmail',
-      'type'  => 'text',
-      'title' => 'Gmail',
-      'help'  => 'Type Gmail.',
     ),
 
     array(

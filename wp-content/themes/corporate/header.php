@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/assets/css/responsive.css';?>"/>
 
 
+  <?php wp_head(); ?>
 
 </head>
 
@@ -43,7 +44,11 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Neogym
+              <?php
+              $option = get_option('_prefix_my_options');
+              echo $option['opt-text'];
+              
+              ?>
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
