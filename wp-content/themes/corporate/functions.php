@@ -152,6 +152,15 @@ require_once get_theme_file_path() .'/inc/codestar/codestar-framework.php';
 
 require_once get_theme_file_path() .'/inc/codestar/samples/admin-options.php';
 
+require_once get_theme_file_path() .'/inc/customposttype/price.php';
+
+
+
+require_once __DIR__ . '/inc/cmb2/init.php';
+// require_once __DIR__ . '/inc/cmb2/example-functions.php';
+
+require_once __DIR__ . '/inc/cmb2/price-cmb.php';
+
 
 
 
